@@ -1,0 +1,13 @@
+diff --git a/include/cbl++/Document.hh b/include/cbl++/Document.hh
+index d28e37e..6fd0034 100644
+--- a/include/cbl++/Document.hh
++++ b/include/cbl++/Document.hh
+@@ -103,7 +103,7 @@ namespace cbl {
+     public:
+         /** Creates a new, empty document in memory, with a randomly-generated unique ID.
+             It will not be added to a database until saved. */
+-        explicit MutableDocument(nullptr_t)             {_ref = (CBLRefCounted*)CBLDocument_CreateWithID(fleece::nullslice);}
++        explicit MutableDocument(std::nullptr_t)             {_ref = (CBLRefCounted*)CBLDocument_CreateWithID(fleece::nullslice);}
+         
+         /** Creates a new, empty document in memory, with the given ID.
+             It will not be added to a database until saved.
